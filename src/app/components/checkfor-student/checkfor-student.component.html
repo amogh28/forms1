@@ -1,0 +1,35 @@
+<div class="form-group">
+    <label>Search For Student</label><br>
+    <h5 style="color:red;margin-bottom:2%" id="error_query"> Please enter a valid PR number.</h5>
+    
+    Enter PR number: <input id="createName" class="form-control" type="text" placeholder="Ex: 101" ng-model="prNumber">
+    <button (click)="findStudent()" >Query Specific</button>  </div>
+
+  <table  class="table">
+    <tr>
+      <th>PR no.</th>
+      <th>Student Name</th>
+      <th>College Name</th>
+      <th>Seat no. </th>
+      <th>Examination</th>
+      <th>Year of Passing</th>
+      <th>subject</th>
+      <th>Email ID</th>
+      <th>Branch</th>
+      <th>Mobile Number</th>
+    </tr>
+      <tr ng-repeat="cert in all_cert">
+        <td>{{cert.PRno}}</td>
+        <td>{{cert.Student_Name}}</td>
+        <td>{{cert.College_Name}}</td>
+        <td>{{cert.Seat_no}}</td>
+        <td>{{cert.Examination}}</td>
+        <td>{{cert.YOP}}</td>
+        <td>{{cert.Subject}}</td>
+        <td>{{cert.emailId}}</td>
+        <td>{{cert.Banch}}</td>
+        <td>{{cert.mobileNumber}}</td>
+    </tr>
+  </table>
+
+  
